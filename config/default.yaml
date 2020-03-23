@@ -1,0 +1,27 @@
+# the level of logger
+log:
+  level: debug
+
+sensecap:
+  # "global" or "china", depends on your account.
+  region: global
+  # the oganization id and access key, from your sensecap account.
+  orgid: 000000000000
+  ak: 0000000000000000000000000000000000000000000000000000000000000000
+  # if "none", the bridge will only forward data since it starts. Otherwise, Specify a different clientid string, the bridge will have the "retain" feature of MQTT 3.1.1.
+  clientid: none
+
+iotcentral:
+  # ID Scope, from your Azure Iot Central Instance.
+  idscope: 00000000000
+  # SaS, from your Azure Iot Central Instance.
+  sas: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+# white list of devices.
+# if enabled, the bridge will only forward the aimed devices to iot central
+whitelist:
+  enable: false
+  euis:
+    - 2cf7f10000000000
+    - 2CF7F10000000001
+
